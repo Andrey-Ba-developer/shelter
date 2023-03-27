@@ -3,7 +3,7 @@
 	padding: 0;
 }
 
-body {}
+
 
 .wrapper {
 	width: 1280px;
@@ -141,7 +141,19 @@ h1 {
 	align-items: center;
 	color: #292929;
 	letter-spacing: 0.06em;
+	
 }
+
+.our-pets__button-learn-more:hover {
+	background-color: #e9901d;
+	color: white;
+}
+
+a:hover {
+	background-color: #995d0ff5;
+	color: white;
+}
+
 
 .our-pets__navigation {
 margin-top: 45px;

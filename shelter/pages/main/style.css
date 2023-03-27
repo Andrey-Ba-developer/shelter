@@ -3,24 +3,25 @@
 	padding: 0;
 }
 
-body {
-	width: 1280px;
-	margin: 0 auto;
-}
+
 
 .header {
 	background-image: url("../../assets/images/start-screen-background.jpg");
+	width: 1280px;
 	height: 882px;
-	background-size: cover;
-	padding: 30px 40px 0px 40px;
+	padding-top: 30px;
+	
 }
 
 .header__container {
 	display: flex;
 	justify-content: space-between;
+	margin: 0 40px;
+	
 }
 
-.header__logo {}
+.header__logo {
+}
 
 h1 {
 	margin-bottom: 10px;
@@ -78,14 +79,16 @@ h1 {
 }
 
 .not-only {
-	margin-top: 90px;
+	margin: 90px 40px 0 40px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	
 }
 
 .not-only__content {
 	margin-right: 40px;
+
 }
 
 .h2__not-only {
@@ -135,8 +138,15 @@ h1 {
 
 
 /* -----------------------------start section "about" -------------- */
-
-.about {}
+body {
+	width: 1280px;
+	margin: 0 auto;
+}
+.about {
+	width: 1280px;
+	margin: 0 auto;
+	text-align: center;
+}
 
 .container {
 	width: 1200px;
@@ -333,6 +343,8 @@ h1 {
 	color: #292929;
 }
 
+
+
 /* -----------------------------end of section "our-friends" -------------- */
 
 /* -----------------------------start section "in-addition" -------------- */
@@ -410,13 +422,14 @@ h1 {
 
 /* -----------------------------end of section "in-addition" -------------- */
 
-/* -----------------------------start of section "donation" -------------- */
+/* -----------------------------start of section "in-addition" -------------- */
 
-.donation {
+.in-addition {
 	background: #F6F6F6;
+	width: 1280px;
 }
 
-.donation__content {
+.in-addition__content {
 	padding: 80px 0 100px 0;
 	display: flex;
 	justify-content: center;
@@ -424,15 +437,15 @@ h1 {
 
 }
 
-.donation__img {
+.in-addition__img {
 	margin-right: 30px;
 }
 
-.donation__content-info {
+.in-addition__content-info {
 	width: 380px;
 }
 
-.donation__h3 {
+.in-addition__h3 {
 	width: 300px;
 	font-family: 'Georgia';
 	font-weight: 400;
@@ -442,7 +455,7 @@ h1 {
 	color: #545454;
 }
 
-.donation__info-bank {
+.in-addition__info-bank {
 	margin: 20px 0;
 	font-family: 'Georgia';
 	font-weight: 400;
@@ -452,7 +465,7 @@ h1 {
 	color: #545454;
 }
 
-.donation__credit-card {
+.in-addition__credit-card {
 	width: 320px;
 	background: #F1CDB3;
 	border-radius: 9px;
@@ -460,11 +473,11 @@ h1 {
 	display: flex;
 }
 
-.donation__credit-card-icon {
+.in-addition__credit-card-icon {
 	margin-right: 15px;
 }
 
-.donation__credit-card-number {
+.in-addition__credit-card-number {
 	font-family: 'Georgia';
 	font-weight: 400;
 	font-size: 20px;
@@ -473,7 +486,7 @@ h1 {
 	color: #545454;
 }
 
-.donation__end-info {
+.in-addition__end-info {
 	margin-top: 20px;
 	font-family: 'Arial';
 	font-style: italic;
@@ -483,7 +496,7 @@ h1 {
 	color: #B2B2B2;
 }
 
-/* -----------------------------end of section "donation" -------------- */
+/* -----------------------------end of section "in-addition" -------------- */
 
 
 
@@ -549,5 +562,11 @@ h1 {
 .footer__container-img {
 	display: flex;
 }
+
+button:hover {
+	background-color: #e5bb84;
+	color: white;
+}
+
 
 /* -----------------------------end of section "footer" -------------- */
