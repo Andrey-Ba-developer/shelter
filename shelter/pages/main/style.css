@@ -297,6 +297,16 @@ body {}
 	background-color: #fff;
 }
 
+.our-friends__image-block:hover button {
+	background-color: #e5bb84;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+
+
 
 
 .our-friends__image-block-last {
@@ -617,7 +627,7 @@ a:hover {
 }
 
 button {
-	
+	transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
