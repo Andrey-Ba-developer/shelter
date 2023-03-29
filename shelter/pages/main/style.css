@@ -33,10 +33,7 @@ html {
 
 }
 
-h1:hover {
-	color: #69532a;
-	transform: scale;
-}
+
 
 .container {
 	width: 1200px;
@@ -672,8 +669,17 @@ a:not(.a-h1):hover {
 	font-size: 105%;
 }
 
+h1 {
+	transition: all 0.3s ease-in-out;
+}
+
+h1:hover {
+	color: #69532a;
+	transform: scale;
+}
+
 button {
-	transition: background-color 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 button:hover {

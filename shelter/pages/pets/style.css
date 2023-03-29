@@ -341,8 +341,17 @@ a {
 	transition: all 0.3s ease-in-out;
 }
 
+h1 {
+	transition: all 0.3s ease-in-out;
+}
 
-a:hover {
+h1:hover {
+	color: #cf4607;
+	transform: scale;
+}
+
+
+a:not(.a-h1):hover {
 
 	color: rgb(165, 136, 7);
 	cursor: pointer;
@@ -351,7 +360,7 @@ a:hover {
 }
 
 button {
-	transition: background-color 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 button:hover {
@@ -366,6 +375,8 @@ button:hover {
 	color: white;
 	cursor: pointer;
 }
+
+
 
 
 /* -----------------------------end of section "footer" -------------- */
