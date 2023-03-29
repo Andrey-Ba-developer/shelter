@@ -28,7 +28,14 @@ html {
 }
 
 .a-h1 {
-	text-decoration: none
+	text-decoration: none;
+
+
+}
+
+h1:hover {
+	color: #69532a;
+	transform: scale;
 }
 
 .container {
@@ -50,6 +57,7 @@ html {
 .header__logo {}
 
 h1 {
+
 	margin-bottom: 10px;
 	font-size: 32px;
 	letter-spacing: 6%;
@@ -153,8 +161,17 @@ h1 {
 	font-size: 17px;
 	line-height: 130%;
 	letter-spacing: 0.06em;
+
+
+
+}
+
+.button-primary-1 {
+	text-decoration: none;
 	color: #292929;
 }
+
+
 
 .not-only__start-screen-puppy {
 	width: 698px;
@@ -376,7 +393,10 @@ body {}
 	color: #292929;
 }
 
-
+.our-friends__button-primary-a {
+	text-decoration: none;
+	color: #292929;
+}
 
 /* -----------------------------end of section "our-friends" -------------- */
 
@@ -644,7 +664,7 @@ a {
 }
 
 
-a:hover {
+a:not(.a-h1):hover {
 
 	color: rgb(165, 136, 7);
 	cursor: pointer;
