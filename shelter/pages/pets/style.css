@@ -201,6 +201,7 @@ a {
 	align-items: center;
 	color: #292929;
 	letter-spacing: 0.06em;
+	background-color:#FAFAFA;
 
 }
 
@@ -218,6 +219,11 @@ a {
 
 .our-pets__button-in-active {
 	margin-right: 20px;
+}
+
+.our-pets__button-active button {
+	margin-right: 20px;
+	background: #F1CDB3;
 }
 
 .our-pets__button-in-active:last-child {
