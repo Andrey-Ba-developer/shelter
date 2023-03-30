@@ -119,7 +119,8 @@ h1 {
 }
 
 .not-only__content {
-	margin-right: 40px;
+
+	margin-bottom: 85px;
 
 }
 
@@ -158,15 +159,10 @@ h1 {
 	font-size: 17px;
 	line-height: 130%;
 	letter-spacing: 0.06em;
-
-
-
-}
-
-.button-primary-1 {
 	text-decoration: none;
-	color: #292929;
+	color: #292929
 }
+
 
 
 
@@ -321,6 +317,10 @@ body {}
 	background-color: #fff;
 }
 
+.our-friends__image-block:hover {
+cursor: pointer;
+}
+
 .our-friends__image-block:hover button {
 	background-color: #e5bb84;
 	color: white;
@@ -380,14 +380,17 @@ body {}
 	border-radius: 100px;
 	margin: 60px 0 100px 0;
 	border-style: none;
-
 	font-family: 'Georgia';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 17px;
 	line-height: 130%;
 	letter-spacing: 0.06em;
-	color: #292929;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+
 }
 
 .our-friends__button-primary-a {
@@ -488,7 +491,8 @@ body {}
 }
 
 .in-addition__img {
-	margin-right: 30px;
+	margin-top: 10px;
+	margin-right: 39px;
 }
 
 .in-addition__content-info {
@@ -566,7 +570,7 @@ body {}
 	background-image: url("../../assets/images/start-screen-background.jpg");
 	background-size: cover;
 	min-width: 100%;
-	padding-top: 30px;
+	/* padding-top: 30px; */
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -575,20 +579,26 @@ body {}
 .footer__container {
 	width: 1200px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	padding: 40px 40px 0 40px;
 
 }
 
 .footer__block-1 {
-	margin-right: 160px;
+	height: 234px;
+	margin-right: 0px;
+	margin-top: 15px;
+	margin-left: 0px;
 
 
 }
 
 .footer__block-2 {
-	margin-right: 160px;
-
+	height: 234px;
+	margin-right: 0px;
+	margin-top: 15px;
+	margin-left: -6px;
+	width: 298px;
 }
 
 .footer__h3 {
@@ -598,6 +608,11 @@ body {}
 	line-height: 130%;
 	letter-spacing: 0.06em;
 	color: #FFFFFF;
+	margin-bottom: 41px;
+}
+.footer__block-2 .footer__h3 {
+	margin-bottom: 34px;
+
 }
 
 .footer__block-1 .footer__h3 {
@@ -623,17 +638,20 @@ body {}
 }
 
 .footer__content-1 {
-	margin: 40px 0;
+	margin-bottom: 40px;
 	display: flex;
 	align-items: center;
 	flex-direction: row;
+	
 }
 
 .footer__content-2 {
+	margin-top: -5px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	text-decoration: none;
+	margin-left: 0px;
 
 
 }
@@ -652,7 +670,8 @@ body {}
 }
 
 .footer__container-img {
-	display: flex;
+	width: 300px;
+    height: 310px;
 }
 
 
@@ -665,8 +684,8 @@ a:not(.a-h1):hover {
 
 	color: rgb(165, 136, 7);
 	cursor: pointer;
-	border-radius: 10px;
-	font-size: 105%;
+
+
 }
 
 h1 {
