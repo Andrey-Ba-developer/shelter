@@ -307,6 +307,7 @@
 		justify-content: space-between;
 		align-content: space-between;
 	}
+
 	.footer__block-1 {
 		min-width: 280px;
 		width: 40%;
@@ -539,6 +540,7 @@
 	.in-addition__img {
 		margin-right: 10px;
 	}
+
 }
 
 @media (max-width: 1060px) and (min-width: 912px) {
@@ -548,6 +550,7 @@
 		width: 100%;
 		height: auto;
 	}
+
 	.in-addition__img img {
 		width: 90%;
 		height: auto;
@@ -639,6 +642,31 @@
 
 
 @media (max-width: 718px) {
+	.footer__block-1 {
+		margin: 30px 0 0 0;
+	}
+
+	.footer__block-2 {
+		margin: 30px 0 0 0;
+	}
+
+	.footer__container-img {
+		margin: 40px 0 0 0;
+	}
+
+	.a-h1 {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.our-friends__arrow-left {
+		margin-right: 0;
+	}
+
+	.header__container-top {
+		margin: 30px 30px 34px 30px;
+	}
+
 	.our-friends__image-block-main {
 		display: none;
 	}
@@ -670,30 +698,89 @@
 
 }
 
-@media (max-width: 718px) {
-	.footer__block-1 {
-		margin: 30px 0 0 0;
+
+
+
+
+@media (max-width: 534px) {
+	.not-only__button {
+		margin-left: 0;
 	}
 
-	.footer__block-2 {
-		margin: 30px 0 0 0;
+	.h3__our-friends {
+		font-size: 28px;
 	}
 
-	.footer__container-img {
-		margin: 40px 0 0 0;
+	.header__container-button-menu {
+		margin-top: 8px;
+
 	}
 
-	.a-h1 {
+	.h2__not-only {
+		font-size: 36px;
 		margin-left: 0;
 		margin-right: 0;
+
 	}
 
-	.our-friends__arrow-left {
+	.not-only__content {
+		text-align: center;
+		margin-left: 0;
 		margin-right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 	}
+
+	.h3__our-friends {
+		margin: 37px 0 42px 0;
+		text-align: center;
+	}
+
+	.about__container {
+		margin: 69px 0 45px -4px;
+	}
+
+	.our-friends__button-primary {
+		margin: 60px 0 42px 0;
+	}
+
+	.help__h3 {
+		margin-top: 42px;
+		margin-bottom: 17px;
+
+	}
+
+	.help__block-icon-name {
+		margin-top: 20px;
+		font-size: 15px;
+	}
+
+	.help__block-icons {
+		margin-bottom: 30px;
+		margin-right: 30px;
+	}
+
+	.help__block-icon img {
+		width: 50px;
+		height: 50px;
+	}
+
 }
 
+
+
 @media (max-width: 434px) {
+	.h2__not-only {
+		font-size: 28px;
+	}
+
+	.help__h3 {
+		font-size: 28px;
+	}
+
+
 	.our-friends__icon-block-right {
 		position: absolute;
 		bottom: -76px;
@@ -714,11 +801,94 @@
 		margin-right: 0;
 	}
 
+	.h2__not-only {
+		letter-spacing: 1.6px;
+	}
+
+	.p__not-only-content {}
+
+	.not-only__content {
+		max-width: 322px;
+	}
+
+	.not-only {
+		padding: 0 10px;
+	}
+
+	.about__content-title {
+		font-size: 30px;
+	}
+
+	.about__content-title {
+		text-align: center;
+	}
+
+	.about__content {
+		margin-top: -27px;
+	}
+
+	.about-pets {
+		margin-top: 42px;
+		margin-left: 15px;
+	}
+	.in-addition__h3 {
+		font-size: 25px;
+		text-align: center;
+		width: 212px;
+	}
+
+	.in-addition__content-info {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: -4px;
+	}
+
+	.in-addition__content {
+		padding: 34px 0 100px 0;
+
+	}
+
+	.in-addition .container {
+		padding: 0 10px;
+	}
+
+	.in-addition__info-bank {
+		letter-spacing: 0.01em;
+		margin: 20px 0 25px 0;
+	}
+
+	.in-addition__credit-card-number {
+		font-size: 15px;
+	}
+
+	.in-addition__credit-card {
+		width: 282px;
+	}
+
+	.in-addition__img {
+		margin-top: 44px;
+		margin-right: -14px;
+		width: 276px;
+	}
+	.in-addition__content {
+		padding: 34px 0 39px 0;
+  }
+  .footer__h3 {
+	font-size: 30px;
+  }
+	
+
 }
 
 @media (max-width: 350px) {
 	.about-pets img {
 		width: 95%;
+	}
+
+	.h3__our-friends {
+		/* width: 50px; */
 	}
 }
 
@@ -734,6 +904,192 @@
 	.footer__container-img {
 		margin: 40px 0 0 0;
 	}
+
+	.h2__not-only {
+		width: 209px;
+	}
+
+	.not-only__content {
+		width: 321px;
+	}
+
+	.p__not-only-content {
+		width: 320px;
+		text-align: center;
+		font-size: 15px;
+		line-height: 24px;
+		letter-spacing: 0.01rem;
+
+		font-family: 'Arial';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 160%;
+		display: flex;
+		align-items: center;
+		text-align: center;
+	}
+
+
+	.not-only__button {
+		margin-top: 3px;
+		margin-bottom: 14px;
+	}
+
+	.not-only__start-screen-puppy {
+		margin-right: 11px;
+	}
+
+	.not-only__start-screen-puppy img {
+		width: 80vw;
+	}
+
+	.about__content-title {
+		font-size: 25px;
+	}
+
+	.about__content-text-1 {
+		text-align: justify;
+		width: 270px;
+		margin-left: 8px;
+	}
+
+	.about__content-text-2 {
+		text-align: justify;
+		width: 270px;
+		margin-left: 8px;
+	}
+
+	.h3__our-friends {
+		font-size: 25px;
+	}
+
+	.h2__not-only {
+		font-size: 25px;
+	}
+
+	.help__h3 {
+		font-size: 25px;
+		width: 236px;
+	}
+
+	.help__block-icons {
+		width: 130px;
+		height: 87px;
+		margin-left: 0;
+		margin-bottom: 30px;
+		margin-right: -14px;
+	}
+
+	.help__content {
+		width: 290px;
+		margin-left: 15px;
+		margin-right: 29px;
+	}
+
+	.help__block-icon-name {
+		margin-top: 16px;
+	}
+
+	.container-help {
+		margin-bottom: 12px;
+	}
+
+
+	.in-addition__h3 {
+		font-size: 25px;
+		text-align: center;
+		width: 212px;
+	}
+
+	.in-addition__content-info {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: -4px;
+	}
+
+	.in-addition__content {
+		padding: 34px 0 100px 0;
+
+	}
+
+	.in-addition .container {
+		padding: 0 10px;
+	}
+
+	.in-addition__info-bank {
+		letter-spacing: 0.01em;
+		margin: 20px 0 25px 0;
+	}
+
+	.in-addition__credit-card-number {
+		font-size: 15px;
+	}
+
+	.in-addition__credit-card {
+		width: 282px;
+	}
+
+	.in-addition__img {
+		margin-top: 44px;
+		margin-right: -14px;
+		width: 276px;
+	}
+	.in-addition__end-info {
+		width: 280px;
+		text-align: justify;
+	}
+	.in-addition__content {
+		padding: 34px 0 39px 0;
+  }
+  .footer__h3 {
+	font-size: 25px;
+	text-align: center;
+	margin-right: 24px;
+  }
+  .footer__container {
+	padding: 0;
+  }
+  .footer__block-2 {
+	margin: 19px 0 0 -25px;
+}
+.footer__block-1  {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: -23px;
+	margin-bottom: -6px;
+}
+.footer__block-1 .footer__h3 {
+	font-size: 25px;
+	text-align: center;
+	margin-right: 0px;
+}
+.footer__block-2 .footer__h3 {
+margin-left: 24px;
+margin-bottom: 39px;
+}
+
+.footer__block-2 .footer__content-1 {
+	margin-bottom: 44px;
+}
+.footer__container-img img {
+	margin: -12px 0 0 -24px;
+    width: 259px;
+	 
+}
+.footer__container {
+	align-items:center;
+	margin-left: 10px;
+}
+.footer__container-img {
+	height: 257px;
+}
+
+
+
 }
 
 
