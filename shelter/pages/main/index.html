@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../main/style.css">
+	<link rel="stylesheet" href="../main/style-responsive.css">
 	<link rel="icon" href="../../assets/icons/favicon.ico" type="image/x-icon">
 	<title>shelter</title>
 </head>
@@ -14,46 +15,53 @@
 <body>
 
 	<header class="header">
-		<div class="header__container">
-			<div class="header__logo">
-				<a class="a-h1" href="#">
-					<h1>Cozy House</h1>
-				</a>
-				<span class="header__subtitle">Shelter for pets in Boston</span>
-			</div>
-			<div class="header__nav-link">
-				<ul>
-					<li class="header__nav-link-activ">
-						<a style="pointer-events:none" href="#">About the shelter</a>
-					</li>
-					<li>
-						<a href="../pets/index.html">Our pets</a>
-					</li>
-					<li>
-						<a href="#help">Help the shelter</a>
-					</li>
-					<li>
-						<a href="#footer">Contacts</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-
-		<div class="not-only">
-			<div class="not-only__content">
-				<h2 class="h2__not-only">Not only people need a house</h2>
-				<p class="p__not-only-content">We offer to give a chance to a little and nice puppy with an extremely wide
-					and
-					open heart. He or she will love you more than anybody else in the world, you will see!</p>
-				<div >
-					<a class="button-primary a-h1" href="#our-friends">Make a friend</a>
+		<div class="header__container-main">
+			<div class="header__container-top">
+				<div class="header__logo">
+					<a class="a-h1" href="#">
+						<h1>Cozy House</h1>
+					</a>
+					<span class="header__subtitle">Shelter for pets in Boston</span>
+				</div>
+				<div class="header__nav-link">
+					<div class="header__container-button-menu">
+						<div class="header__button-menu"></div>
+						<div class="header__button-menu"></div>
+						<div class="header__button-menu"></div>
+					</div>
+					<ul>
+						<li class="header__nav-link-activ">
+							<a style="pointer-events:none" href="#">About the shelter</a>
+						</li>
+						<li>
+							<a href="../pets/index.html">Our pets</a>
+						</li>
+						<li>
+							<a href="#help">Help the shelter</a>
+						</li>
+						<li>
+							<a href="#footer">Contacts</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<div class="not-only__start-screen-puppy">
-				<img src="../../assets/images/start-screen-puppy.png" alt="dog close-up">
-			</div>
 
+			<div class="not-only">
+				<div class="not-only__content">
+					<h2 class="h2__not-only">Not only people need a house</h2>
+					<p class="p__not-only-content">We offer to give a chance to a little and nice puppy with an extremely
+						wide
+						and
+						open heart. He or she will love you more than anybody else in the world, you will see!</p>
+					<div class="not-only__button">
+						<a class="button-primary a-h1" href="#our-friends">Make a friend</a>
+					</div>
+				</div>
+				<div class="not-only__start-screen-puppy">
+					<img src="../../assets/images/start-screen-puppy.png" alt="dog close-up">
+				</div>
+
+			</div>
 		</div>
 	</header>
 
@@ -81,7 +89,7 @@
 	</div>
 
 	<div class="our-friends" id="our-friends">
-		<div class="container our-friends">
+		<div class="our-friends-container ">
 			<h3 class="h3__our-friends">Our friends who
 				are looking for a house</h3>
 			<div class="our-friends-content">
@@ -99,7 +107,7 @@
 				</div>
 
 
-				<div class="our-friends__image-block">
+				<div class="our-friends__image-block our-friends__image-block-main ">
 					<div class="our-friends__image-container">
 						<img src="../../assets/images/pets-jennifer.png" alt="pets jennifer">
 					</div>
@@ -119,7 +127,7 @@
 					</button>
 				</div>
 			</div>
-			<div class="our-friends__button-primary" >
+			<div class="our-friends__button-primary">
 				<a class="our-friends__button-primary-a a-h1" href="../pets/index.html">Get to know the rest</a>
 			</div>
 
@@ -131,53 +139,44 @@
 				our shelter</h3>
 			<div class="help__container-icons">
 
-				<div class="help__content help__row-1">
+				<div class="help__content help__row">
 
-					<div class="help__block-icons">
+					<div class="help__block-icons help__block-icons-1 row-1">
 						<div class="help__block-icon">
 							<img src="../../assets/icons/icon-pet-food.svg" alt="#">
 						</div>
 						<div class="help__block-icon-name">Pet food</div>
 					</div>
 
-
-					<div class="help__block-icons">
+					<div class="help__block-icons help__block-icons-2 row-1">
 						<div class="help__block-icon">
 							<img src="../../assets/icons/icon-transportation.svg" alt="#">
 						</div>
 						<div class="help__block-icon-name">Transportation</div>
 					</div>
 
-
-					<div class="help__block-icons">
+					<div class="help__block-icons help__block-icons-3 row-1">
 						<div class="help__block-icon">
 							<img src="../../assets/icons/icon-toys.svg" alt="#">
 						</div>
 						<div class="help__block-icon-name">Toys</div>
 					</div>
 
-
-					<div class="help__block-icons">
+					<div class="help__block-icons help__block-icons-4 row-1">
 						<div class="help__block-icon">
 							<img src="../../assets/icons/icon-bowls-and-cups.svg" alt="#">
 						</div>
 						<div class="help__block-icon-name">Bowls and cups</div>
 					</div>
 
-
-					<div class="help__block-icons">
+					<div class="help__block-icons help__block-icons-5 row-1">
 						<div class="help__block-icon">
 							<img src="../../assets/icons/icon-shampoos.svg" alt="#">
 						</div>
 						<div class="help__block-icon-name">Shampoos</div>
 					</div>
-				</div>
 
-
-
-
-				<div class="help__content help__row-2">
-					<div class="help__block-icons">
+					<div class="help__block-icons help__block-icons-6">
 						<div class="help__block-icon">
 							<img src="../../assets/icons/icon-vitamins.svg" alt="#">
 						</div>
@@ -186,7 +185,7 @@
 
 
 
-					<div class="help__block-icons">
+					<div class="help__block-icons help__block-icons-7">
 						<div class="help__block-icon">
 							<img src="../../assets/icons/icon-medicines.svg" alt="#">
 						</div>
@@ -194,7 +193,7 @@
 					</div>
 
 
-					<div class="help__block-icons">
+					<div class="help__block-icons help__block-icons-8">
 						<div class="help__block-icon">
 							<img src="../../assets/icons/icon-collars-leashes.svg" alt="#">
 						</div>
@@ -202,7 +201,7 @@
 					</div>
 
 
-					<div class="help__block-icons">
+					<div class="help__block-icons help__block-icons-9">
 						<div class="help__block-icon">
 							<img src="../../assets/icons/icon-sleeping-area.svg" alt="#">
 						</div>
@@ -210,6 +209,7 @@
 
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
