@@ -1,0 +1,313 @@
+@media (max-width: 1278px) {
+
+	.wrapper {}
+
+	.container {
+		max-width: 1280px;
+		margin: 0;
+	}
+
+	header {
+		max-width: 1280px;
+	}
+
+	.header__container {
+
+		max-width: 1200px;
+		display: flex;
+		justify-content: space-between;
+		margin: 30px 0px;
+		padding: 0 40px;
+
+	}
+
+	.wrapper__our-pets {
+		width: 100%;
+	}
+
+	.our-pets {
+		max-width: 1280px;
+	}
+
+	.footer__block-1 {
+		margin-right: 10%;
+	}
+
+	.footer__block-2 {
+		margin-right: 10%;
+	}
+
+	.footer__container-img {
+		max-width: 300px;
+
+	}
+
+	.footer__container-img img {
+		width: 100%;
+
+	}
+
+	.footer__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.footer {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.footer__container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.our-pets__conteiner-row-1 {}
+}
+
+
+@media (max-width: 1279px) {
+	.our-pets__conteiner-row-1 {
+		justify-content: center;
+	}
+
+	.our-pets__block:nth-last-child(1),
+	.our-pets__block:nth-last-child(2) {
+		display: none;
+	}
+
+	.our-pets__h3 {
+		margin: 79px -2px 29px 0;
+	}
+
+	.our-pets__navigation {
+		margin-top: 10px;
+		margin-bottom: 76px;
+	}
+
+	.footer__container {
+		padding: 16px 0 0 53px;
+	}
+
+	.footer__container-img {
+		margin-top: 64px;
+	}
+}
+
+
+@media (max-width: 968px) {}
+
+@media (max-width: 768px) {
+	.header__container {
+		padding: 0 30px;
+	}
+
+	.our-pets__button-learn-more {}
+
+	.footer__block-2 {
+		margin-right: 7.5vw;
+	}
+
+	.footer__block-1 {
+		margin-right: 5.6vw;
+	}
+
+	.footer__block-2 .footer__h3 {
+		margin-bottom: 32px;
+	}
+
+	.footer__container-img {
+		margin-right: 7vw;
+	}
+
+}
+
+
+@media (max-width: 766px) {
+	.header__nav-link ul {
+		display: none;
+	}
+
+	.header__container-button-menu-icons {
+		display: block;
+	}
+
+	.header__button-menu {
+		display: block;
+	}
+}
+
+
+@media (max-width: 766px) {
+	.our-pets__navigation {
+		margin-top: 10px;
+		margin-bottom: 44px;
+	}
+
+}
+
+
+@media (max-width: 659px) {
+
+	.our-pets__block:nth-last-child(3),
+	.our-pets__block:nth-last-child(4),
+	.our-pets__block:nth-last-child(5) {
+		display: none;
+	}
+
+	.our-pets__block {
+		margin-right: 0px;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.our-pets__h3,
+	.footer__h3 {
+		font-size: 28px;
+	}
+
+	.our-pets__h3 {
+		max-width: 300px;
+	}
+
+	.header__container {
+		padding: 0 20px;
+	}
+
+	.our-pets__h3 {
+		margin: 41px -2px 41px 0;
+	}
+	.footer__block-1 .footer__h3 {
+		text-align: center;
+	}
+	.footer__block-2 .footer__h3 {
+		text-align: center;
+	}
+}
+
+@media (max-width: 380px) {
+	.our-pets__button-in-active {
+		margin-right: 10px;
+	}
+
+	.our-pets__button-active {
+		margin-right: 10px;
+	}
+
+	.our-pets__button-active button {
+		margin-right: 0;
+	}
+
+	.footer__container {
+		padding: 16px 0 0 0px;
+	}
+
+	.footer__block-1 {
+		margin-right: 0vw;
+	}
+
+	.footer__block-2 {
+		margin-right: 0vw;
+	}
+
+	.footer__container-img {
+		margin-right: 0vw;
+	}
+
+	.our-pets__conteiner-row-1 {
+		margin-left: 0px;
+	}
+	.footer__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.footer__container-img {
+		height: 257px;
+		margin-top: 41px;
+	}
+	
+
+}
+
+
+
+
+
+@media (max-width: 320px) {
+
+	.our-pets__h3,
+	.footer__h3 {
+		font-size: 25px;
+	}
+
+	.header__container-button-menu {
+		margin-right: -1px;
+		margin-top: -1px;
+	}
+
+	.footer__h3 {
+		font-size: 25px;
+		text-align: center;
+		margin-right: 24px;
+	}
+
+	.footer__container {
+		padding: 0;
+	}
+
+	.footer__block-2 {
+		margin: 19px 0 0 -4px;
+	}
+
+	.footer__block-1 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: -2px;
+		margin-bottom: -6px;
+		margin-top: 29px;
+	}
+
+	.footer__block-1 .footer__h3 {
+		font-size: 25px;
+		text-align: center;
+		margin-right: 0px;
+	}
+
+	.footer__block-2 .footer__h3 {
+		margin-left: 24px;
+		margin-bottom: 39px;
+	}
+
+	.footer__block-2 .footer__content-1 {
+		margin-bottom: 44px;
+	}
+
+	.footer__block-2 .footer__h3 {
+		margin-left: 29px;
+		margin-bottom: 39px;
+	}
+
+	.footer__container-img img {
+		margin: -12px 0 0 -20px;
+		width: 259px;
+
+	}
+
+	.footer__container {
+		align-items: center;
+		margin-left: 0px;
+	}
+
+	.footer__container-img {
+		height: 257px;
+		margin-top: 41px;
+	}
+	.footer__container-img {
+		margin-right: -19px;
+  }
+
+}
