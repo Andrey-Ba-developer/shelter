@@ -11,4 +11,23 @@ document.addEventListener('DOMContentLoaded', function () {
 		bodyOverlay.classList.toggle('active');
 		body.appendChild(bodyOverlay);
 	});
+
+	bodyOverlay.addEventListener('click', function () {
+		header.classList.remove('open');
+		body.classList.remove('no-scroll');
+		bodyOverlay.classList.remove('active');
+	});
+
+	const burgerLinks = document.querySelectorAll('.header__nav-link-ul-container a');
+
+	burgerLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			header.classList.remove('open');
+			body.classList.remove('no-scroll');
+			bodyOverlay.classList.remove('active');
+		});
+	});
+
+
 });
+
