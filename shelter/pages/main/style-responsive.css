@@ -645,7 +645,7 @@
 	.header__container-button-menu {
 		position: absolute;
 		z-index: 5;
-		top: 45px;
+		top: 49px;
 		right: 20px;
 		transition: all .6s;
 		background-color: none;
@@ -674,11 +674,15 @@
 	.header__logo {}
 
 	.header__container-button-menu {
-		margin-top: 21px;
+		
 	}
 
 	.header__button-menu {
 		display: block;
+	}
+
+	.header__one-line {
+		margin-top: 0px;
 	}
 }
 
@@ -787,11 +791,6 @@
 
 	.h3__our-friends {
 		font-size: 28px;
-	}
-
-	.header__container-button-menu {
-		margin-top: 8px;
-
 	}
 
 	.h2__not-only {
