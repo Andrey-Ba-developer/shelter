@@ -14,21 +14,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-	// bodyOverlay.addEventListener('click', function () {
-	// 	header.classList.remove('open');
-	// 	body.classList.remove('no-scroll');
-	// 	bodyOverlay.classList.remove('active');
-	// });
+	bodyOverlay.addEventListener('click', function () {
+		header.classList.remove('open');
+		body.classList.remove('no-scroll');
+		bodyOverlay.classList.remove('active');
+	});
 
-	// const burgerLinks = document.querySelectorAll('.header__nav-link-ul-container a');
+	const burgerLinks = document.querySelectorAll('.header__nav-link-ul-container a');
 
-	// burgerLinks.forEach(link => {
-	// 	link.addEventListener('click', () => {
-	// 		header.classList.remove('open');
-	// 		body.classList.remove('no-scroll');
-	// 		bodyOverlay.classList.remove('active');
-	// 	});
-	// });
+	burgerLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			header.classList.remove('open');
+			body.classList.remove('no-scroll');
+			bodyOverlay.classList.remove('active');
+		});
+	});
 
 
 });

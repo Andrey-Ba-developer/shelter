@@ -136,6 +136,7 @@
 		margin-top: 10px;
 		margin-bottom: 44px;
 	}
+
 	.header__nav-link-ul-container {
 		position: absolute;
 		width: 320px;
@@ -148,6 +149,7 @@
 		transition: transform .5s, visibility .5s;
 
 	}
+
 	.header__nav-link-ul {
 		position: absolute;
 		top: 248px;
@@ -158,6 +160,7 @@
 		justify-content: center;
 		align-items: center;
 	}
+
 	.header__nav-link ul li a {
 		color: #FAFAFA;
 		font-family: 'Arial';
@@ -170,7 +173,7 @@
 	.header__nav-link-activ::after {
 		content: "";
 		display: block;
-		max-width: 243px;
+		width: 121px;
 		height: 3px;
 		background: #F1CDB3;
 		margin-top: 5px;
@@ -188,12 +191,6 @@
 		right: 20px;
 		transition: all .6s;
 		background-color: none;
-		
-		
-	}
-
-	header.open .header__container-button-menu {
-		transform: rotate(90deg);
 	}
 
 	.header__button-menu {
@@ -201,8 +198,26 @@
 		height: 0px;
 		margin: 10px;
 		border: 1px solid #000000;
-		
+		color: #000000;
+		animation: change-color 3s forwards;
+	 }
+	 
+	 @keyframes change-color {
+		from { color: #000000; }
+		to { color: #ffffff; }
+	 }
+	 
+	 header.open .header__button-menu {
+		border: 1px solid #e6e6e6;
+		color: #e6e6e6;
+	 }
+
+
+header.open .header__container-button-menu {
+		transform: rotate(90deg);
 	}
+
+
 
 	.header.open .header__nav-link-ul-container {
 		transform: translateX(-100%);
@@ -212,9 +227,7 @@
 
 	.header__logo {}
 
-	.header__container-button-menu {
-		
-	}
+	.header__container-button-menu {}
 
 	.header__button-menu {
 		display: block;
@@ -226,10 +239,7 @@
 }
 
 
-@media (max-width: 766px) {
-	
-
-}
+@media (max-width: 766px) {}
 
 
 @media (max-width: 659px) {
@@ -263,9 +273,11 @@
 	.our-pets__h3 {
 		margin: 41px -2px 41px 0;
 	}
+
 	.footer__block-1 .footer__h3 {
 		text-align: center;
 	}
+
 	.footer__block-2 .footer__h3 {
 		text-align: center;
 	}
@@ -303,16 +315,18 @@
 	.our-pets__conteiner-row-1 {
 		margin-left: 0px;
 	}
+
 	.footer__container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
 	.footer__container-img {
 		height: 310px;
 		margin-top: 41px;
 	}
-	
+
 
 }
 
@@ -390,8 +404,9 @@
 		height: 257px;
 		margin-top: 41px;
 	}
+
 	.footer__container-img {
 		margin-right: -19px;
-  }
+	}
 
 }
