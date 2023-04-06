@@ -606,7 +606,7 @@
 		z-index: 2;
 		background: #292929;
 		visibility: hidden;
-		transition: transform .5s, visibility .5s;
+		transition: transform .8s, visibility .8s;
 
 	}
 	.header__nav-link-ul {
@@ -647,7 +647,7 @@
 		z-index: 5;
 		top: 49px;
 		right: 20px;
-		transition: all .6s;
+		transition: all .7s;
 		background-color: none;
 		
 		
@@ -684,6 +684,14 @@
 	.header__one-line {
 		margin-top: 0px;
 	}
+
+	/* ------------------------------modal-start-768px------------------------------ */
+
+
+
+
+
+	/* ------------------------------modal-end-768px------------------------------ */
 }
 
 

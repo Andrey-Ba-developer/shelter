@@ -246,40 +246,44 @@ body {}
 	background-color: rgba(0, 0, 0, 0);
 	z-index: 1.5;
 	opacity: 0;
-	transition: all 0.5s ease-out;
-	animation: fadeInOverlay 0.5s ease-out forwards;
+	transition: all 0.8s ease-out;
+	animation: fadeInOverlay 0.8s ease-out forwards;
 	animation-delay: 0.1s;
- }
- 
- .body-overlay.active {
+	pointer-events: none;
+}
+
+.body-overlay.active {
 	opacity: 1;
 	background-color: rgba(0, 0, 0, 0.5);
-	transition: all 0.5s ease-in;
-	animation: fadeOutOverlay 0.5s ease-in forwards;
+	transition: all 0.8s ease-in;
+	animation: fadeOutOverlay 0.8s ease-in forwards;
 	animation-delay: 0s;
- }
- 
- @keyframes fadeInOverlay {
+	pointer-events: auto;
+}
+
+@keyframes fadeInOverlay {
 	100% {
-	  opacity: 0;
+		opacity: 0;
 	}
+
 	0% {
-	  opacity: 1;
-	  background-color: rgba(0, 0, 0, 0.5);
+		opacity: 1;
+		background-color: rgba(0, 0, 0, 0.5);
 	}
- }
- 
- @keyframes fadeOutOverlay {
+}
+
+@keyframes fadeOutOverlay {
 	100% {
-	  opacity: 1;
-	  background-color: rgba(0, 0, 0, 0.5);
+		opacity: 1;
+		background-color: rgba(0, 0, 0, 0.5);
 	}
+
 	0% {
-	  opacity: 0;
+		opacity: 0;
 	}
- }
- 
- 
+}
+
+
 
 .about {
 	max-width: 100%;
@@ -822,7 +826,112 @@ body.no-scroll {
 	overflow: hidden;
 }
 
+/* ----------------------------------------------------------popap-start------------------------------------------- */
 
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 20;
+	background-color: rgba(0, 0, 0, .3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .4s, visibility .4s;
+}
+
+.modal.open {
+	visibility: visible;
+	opacity: 1;
+}
+.modal.open .modal__container {
+	transform: scale(1);
+}
+
+.modal__container {
+	max-width: 900px;
+	max-height: 500px;
+	z-index: 1;
+	box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+	background-color: #FAFAFA;
+	border-radius: 9px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(0);
+	transition: transform .9s;
+
+}
+
+.modal__img {
+	margin-top: 3px;
+	width: 500px;
+	height: auto;
+}
+
+.modal__img img {
+	width: 100%;
+	height: auto;
+}
+
+.modal__content {
+	margin: 50px 20px 88px 29px;
+	max-width: 350px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.modal__content-h3 h3 {
+	font-family: 'Georgia';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 130%;
+	letter-spacing: 0.06em;
+	color: #000000;
+	margin-bottom: 10px;
+}
+
+.modal__content-subtitle h4 {
+	font-family: 'Georgia';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 115%;
+	letter-spacing: 0.06em;
+	color: #000000;
+	margin-bottom: 40px;
+}
+
+
+
+.modal__content-text {
+	margin-bottom: 40px;
+}
+
+.modal__content-block-info {}
+
+.modal__content-block-info span {
+	display: block;
+	margin-bottom: 10px;
+	font-family: 'Georgia';
+	font-style: normal;
+	font-size: 15px;
+	line-height: 110%;
+	letter-spacing: 0.06em;
+	color: #000000;
+}
+
+.modal__content-block-info span:last-child {
+	margin-bottom: 0px;
+}
+
+/* -------------------------------------------------------------popap-end--------------------------------------------- */
 
 
 
@@ -869,9 +978,10 @@ button:not(.header__container-button-menu):hover {
 
 .no-scroll {
 	position: fixed;
- }
- .opacity {
+}
+
+.opacity {
 	opacity: .3;
- }
+}
 
 /* ---------------------------------------"@media" ---------------------------------------------- */

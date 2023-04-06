@@ -146,7 +146,7 @@
 		z-index: 2;
 		background: #292929;
 		visibility: hidden;
-		transition: transform .5s, visibility .5s;
+		transition: transform .8s, visibility .8s;
 
 	}
 
@@ -189,7 +189,7 @@
 		z-index: 5;
 		top: 49px;
 		right: 20px;
-		transition: all .6s;
+		transition: all .7s;
 		background-color: none;
 	}
 
@@ -197,20 +197,18 @@
 		width: 30px;
 		height: 0px;
 		margin: 10px;
-		border: 1px solid #000000;
+		border: 1px solid;
 		color: #000000;
-		animation: change-color 3s forwards;
-	 }
-	 
-	 @keyframes change-color {
-		from { color: #000000; }
-		to { color: #ffffff; }
-	 }
-	 
-	 header.open .header__button-menu {
-		border: 1px solid #e6e6e6;
-		color: #e6e6e6;
-	 }
+		transition: all 1s;
+	}
+	
+	
+	
+	header.open .header__button-menu {
+		border: 1px solid;
+		color: #fcfcfc; /* добавить во 2 страницу */
+	}
+	
 
 
 header.open .header__container-button-menu {
