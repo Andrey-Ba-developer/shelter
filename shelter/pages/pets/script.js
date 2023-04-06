@@ -33,3 +33,52 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+
+
+
+
+
+
+
+const modals = {
+	'katrine': document.getElementById('modal__katrine'),
+	'jennifer': document.getElementById('modal__jennifer'),
+	'woody': document.getElementById('modal__woody'),
+	'sophia': document.getElementById('modal__sophia'),
+	'timmy': document.getElementById('modal__timmy'),
+	'charly': document.getElementById('modal__charly'),
+	'scarlett': document.getElementById('modal__scarlett'),
+	'freddie': document.getElementById('modal__freddie'),
+};
+
+const body = document.body; // Получаем элемент <body>
+
+Object.keys(modals).forEach(function (modal) {
+	if (modals[modal]) {
+		document.getElementById('open-modal-btn-' + modal).addEventListener('click', function () {
+			modals[modal].classList.add('open');
+			body.style.overflow = 'hidden'; // Добавляем стиль для запрета скроллинга
+		});
+
+		const closeBtn = modals[modal].querySelector('.close-my-modal-btn');
+		if (closeBtn) {
+			closeBtn.addEventListener('click', function () {
+				modals[modal].classList.remove('open');
+				body.style.overflow = ''; // Удаляем стиль для возврата скроллинга
+			});
+		}
+
+	}
+	
+});
+
+
+
+
+
+
+
+
+
+
+
