@@ -240,7 +240,7 @@ a {
 
 }
 
-.our-pets__conteiner-row-1 {
+.our-pets__container {
 	display: flex;
 	max-width: 1240px;
 	flex-wrap: wrap;

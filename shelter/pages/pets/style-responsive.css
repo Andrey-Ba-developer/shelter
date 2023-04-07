@@ -63,12 +63,12 @@
 		flex-wrap: wrap;
 	}
 
-	.our-pets__conteiner-row-1 {}
+	.our-pets__container {}
 }
 
 
 @media (max-width: 1279px) {
-	.our-pets__conteiner-row-1 {
+	.our-pets__container {
 		justify-content: center;
 	}
 
@@ -513,7 +513,7 @@ header.open .header__container-button-menu {
 		margin-right: 0vw;
 	}
 
-	.our-pets__conteiner-row-1 {
+	.our-pets__container {
 		margin-left: 0px;
 	}
 
