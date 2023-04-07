@@ -123,6 +123,7 @@ const scoreboard = document.querySelector('.pagination__scoreboard');
 const nextPageBtn = document.querySelector('.next-page');
 const lastPageBtn = document.querySelector('.last-page');
 
+
 const petsPerPage = 8;
 let currentPage = 1;
 let numPages;
@@ -139,13 +140,37 @@ if (screenWidth >= 769) {
 }
 
 
+function updateButtonState() {
+	if (currentPage === 1) {
+	  firstPageBtn.disabled = true;
+	  prevPageBtn.disabled = true;
+	  firstPageBtn.classList.add('disabled');
+	  prevPageBtn.classList.add('disabled');
+	} else {
+	  firstPageBtn.disabled = false;
+	  prevPageBtn.disabled = false;
+	  firstPageBtn.classList.remove('disabled');
+	  prevPageBtn.classList.remove('disabled');
+	}
+ 
+	if (currentPage === numPages) {
+	  nextPageBtn.disabled = true;
+	  lastPageBtn.disabled = true;
+	  nextPageBtn.classList.add('disabled');
+	  lastPageBtn.classList.add('disabled');
+	} else {
+	  nextPageBtn.disabled = false;
+	  lastPageBtn.disabled = false;
+	  nextPageBtn.classList.remove('disabled');
+	  lastPageBtn.classList.remove('disabled');
+	}
+ }
 
 
 function generatePetCards(page) {
 	const startIndex = (page - 1) * petsPerPage;
 	const endIndex = Math.min(startIndex + petsPerPage, pets.length);
 	let pagePets = pets.slice(startIndex, endIndex);
-
 
 	if (page > 1) {
 		pagePets = shuffleArray(pets.slice(0, endIndex)).slice(0, petsPerPage);
@@ -168,22 +193,26 @@ function generatePetCards(page) {
 
 		container.appendChild(petCard);
 	});
+
+	updateButtonState();
 }
+
+
 
 function shuffleArray(array) {
 	const shuffled = [...array];
 	for (let i = shuffled.length - 1; i > 0; i--) {
-	  const j = Math.floor(Math.random() * (i + 1));
-	  const shouldSwap = Math.random() > 0.5; 
-	  if (shouldSwap) {
-		 [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-	  } else {
-		 const k = Math.floor(Math.random() * (i + 1));
-		 [shuffled[i], shuffled[k]] = [shuffled[k], shuffled[i]];
-	  }
+		const j = Math.floor(Math.random() * (i + 1));
+		const shouldSwap = Math.random() > 0.5;
+		if (shouldSwap) {
+			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+		} else {
+			const k = Math.floor(Math.random() * (i + 1));
+			[shuffled[i], shuffled[k]] = [shuffled[k], shuffled[i]];
+		}
 	}
 	return shuffled;
- }
+}
 
 function updateScoreboard() {
 	scoreboard.innerText = currentPage;
@@ -231,7 +260,9 @@ function handleLastPageClick() {
 
 
 generatePetCards(currentPage);
+updateButtonState()
 updateScoreboard();
+
 
 
 firstPageBtn.disabled = true
