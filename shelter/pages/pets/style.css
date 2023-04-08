@@ -17,6 +17,19 @@ html {
 	scroll-behavior: smooth;
 }
 
+body {
+	box-sizing: border-box;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
+}
+
 
 .wrapper {
 
@@ -210,10 +223,6 @@ a {
 
 /* ---------------our-pets-------------------------- */
 
-.firstPageBtn.customButtonStyle {
-	background-color: red;
-	cursor: pointer;
-}
 
 
 .wrapper__our-pets {
@@ -267,7 +276,6 @@ a {
 	border-radius: 9px;
 	margin-right: 40px;
 	margin-bottom: 30px;
-
 }
 
 
@@ -275,6 +283,21 @@ a {
 .our-pets__block:last-child {
 	margin-right: 0;
 }
+
+.our-pets__block button {
+	height: 52px;
+	width: 187px;
+	margin: 30px 40px;
+	border: 2px solid #F1CDB3;
+	border-radius: 100px;
+	align-items: center;
+	color: #292929;
+	letter-spacing: 0.06em;
+	background-color: #FAFAFA;
+	font-size: 17px;
+}
+
+
 
 .our-pets__img img {
 	min-width: 270px;
@@ -303,19 +326,7 @@ button {
 	color: #545454;
 }
 
-.our-pets__button-learn-more {
-	height: 52px;
-	width: 187px;
-	margin: 30px 40px;
-	border: 2px solid #F1CDB3;
-	border-radius: 100px;
-	align-items: center;
-	color: #292929;
-	letter-spacing: 0.06em;
-	background-color: #FAFAFA;
-	font-size: 17px;
-
-}
+.our-pets__button-learn-more {}
 
 .our-pets__button-learn-more:hover {
 	background-color: #bb7212;
@@ -337,7 +348,7 @@ button {
 }
 
 
-.disabled  {
+.disabled {
 	cursor: default;
 	pointer-events: none;
 	border: 2px solid #CDCDCD !important;
@@ -396,7 +407,7 @@ button {
 }
 
 .last-page {
-	margin-right: 20px;
+	margin-right: 0px;
 	width: 52px;
 	height: 52px;
 	border: 2px solid #F1CDB3;
@@ -425,7 +436,7 @@ button {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-right: 20px;
+	margin-right: 0px;
 }
 
 .our-pets__button-active button:hover {
@@ -756,8 +767,11 @@ button:not(.header__container-button-menu):hover {
 
 .our-pets__block:hover {
 	cursor: pointer;
+	background-color: #fff;
 }
 
-
+body {
+	overflow: auto;
+}
 
 /* -----------------------------end of section "footer" -------------- */

@@ -18,6 +18,19 @@ html {
 }
 
 
+body {
+	box-sizing: border-box;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
+}
+
 
 .header {
 	background-image: url("../../assets/images/start-screen-background.jpg");
@@ -371,18 +384,105 @@ body {}
 	letter-spacing: 0.06em;
 	color: #545454;
 
-
-
 }
+
+
+
+
+
+
+
+
 
 .our-friends-content {
 	display: flex;
-
-}
-
-.our-friends__arrow-left {
 	position: relative;
 }
+
+/* .our-pets__block {
+	visibility: hidden;
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.our-friends-content.show .our-pets__block {
+	opacity: 1;
+	transform: translateX(0%);
+	visibility: visible;
+} */
+
+
+
+
+
+
+
+
+
+.our-pets__block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #FAFAFA;
+	border-radius: 9px;
+	margin-right: 40px;
+	margin-bottom: 30px;
+}
+
+
+
+.our-pets__block:last-child {
+	margin-right: 0;
+}
+
+.our-pets__block button {
+	height: 52px;
+	width: 187px;
+	margin: 30px 40px;
+	border: 2px solid #F1CDB3;
+	border-radius: 100px;
+	align-items: center;
+	color: #292929;
+	letter-spacing: 0.06em;
+	background-color: #FAFAFA;
+	font-size: 17px;
+}
+
+
+
+.our-pets__img img {
+	min-width: 270px;
+
+	height: auto;
+}
+
+.our-pets__img img {
+	min-width: 270px;
+	width: 100%;
+	height: auto;
+}
+
+button {
+	background-color: #FAFAFA;
+}
+
+
+.our-pets__block p {
+	margin-top: 26px;
+	font-family: 'Georgia';
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 23px;
+	letter-spacing: 0.06em;
+	color: #545454;
+}
+
+
+
+
+
+
+
+.our-friends__arrow-left {}
 
 .our-friends__icon-block-left {
 	width: 52px;
@@ -390,8 +490,8 @@ body {}
 	border: 2px solid #F1CDB3;
 	border-radius: 100px;
 	position: absolute;
-	bottom: 191px;
-	left: -105px;
+	bottom: 425px;
+	left: 432px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -405,8 +505,8 @@ body {}
 	border: 2px solid #F1CDB3;
 	border-radius: 100px;
 	position: absolute;
-	bottom: 191px;
-	right: -105px;
+	bottom: 425px;
+	right: 432px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -952,7 +1052,7 @@ body.no-scroll {
 
 body.modal-open {
 	overflow: hidden;
- }
+}
 
 /* -------------------------------------------------------------popap-end--------------------------------------------- */
 

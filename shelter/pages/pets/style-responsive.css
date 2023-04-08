@@ -452,9 +452,53 @@ header.open .header__container-button-menu {
 	}
 
 	.our-pets__block {
-		margin-right: 0px;
+		margin-right: 40px;
 	}
 }
+
+@media (max-width: 659px) {
+	.our-pets__block {
+		margin-right: 40px;
+		margin-left: 40px;
+	}
+}
+
+@media (max-width: 500px) {
+
+}
+
+.first-page {
+	margin-right: 5px;
+}
+.prev-page {
+	margin-right: 5px;
+}
+
+.next-page {
+	margin-right: 5px;
+}
+
+.last-page {
+	
+}
+
+.our-pets__button-active {
+	margin-right: 10px;
+}
+.our-pets__button-in-active {
+	margin-right: 5px;
+}
+.our-pets__button-in-active:last-child {
+	margin-right: 0;
+}
+
+.our-pets__container {
+	margin-left: 0px;
+}
+.our-pets__navigation span {
+	margin-right: opx;
+}
+
 
 @media (max-width: 500px) {
 
@@ -485,13 +529,13 @@ header.open .header__container-button-menu {
 }
 
 @media (max-width: 380px) {
-	.our-pets__button-in-active {
+	/* .our-pets__button-in-active {
 		margin-right: 10px;
 	}
 
 	.our-pets__button-active {
 		margin-right: 10px;
-	}
+	} */
 
 	.our-pets__button-active button {
 		margin-right: 0;

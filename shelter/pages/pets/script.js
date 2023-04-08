@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () { // меню бургер--------------------------------
 	const burgerBtn = document.getElementById('burger-btn');
 	const header = document.querySelector('.header');
 	const body = document.querySelector('body');
@@ -11,9 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		bodyOverlay.classList.toggle('active');
 		body.appendChild(bodyOverlay);
 	});
-
-
-
 	bodyOverlay.addEventListener('click', function () {
 		header.classList.remove('open');
 		body.classList.remove('no-scroll');
@@ -29,48 +26,55 @@ document.addEventListener('DOMContentLoaded', function () {
 			bodyOverlay.classList.remove('active');
 		});
 	});
+});
+// --------------------------------------------------------------------меню бургер--------------------------------
 
 
+
+
+
+
+
+
+const container = document.querySelector('.our-pets__container');
+
+const modals = {
+	'katrine': document.getElementById('katrine'),
+	'jennifer': document.getElementById('jennifer'),
+	'woody': document.getElementById('woody'),
+	'sophia': document.getElementById('sophia'),
+	'timmy': document.getElementById('timmy'),
+	'charly': document.getElementById('charly'),
+	'scarlett': document.getElementById('scarlett'),
+	'freddie': document.getElementById('freddie'),
+};
+
+const body = document.body;
+
+container.addEventListener('click', function (event) {
+	const petCard = event.target.closest('.our-pets__block');
+	if (petCard) {
+		const modalId = petCard.id.toLowerCase();
+		const modal = modals[modalId];
+		if (modal) {
+			modal.classList.add('open');
+			body.style.overflow = 'hidden';
+		}
+	}
 });
 
-
-
-
-
-
-
-
-// const modals = {
-// 	'katrine': document.getElementById('modal__katrine'),
-// 	'jennifer': document.getElementById('modal__jennifer'),
-// 	'woody': document.getElementById('modal__woody'),
-// 	'sophia': document.getElementById('modal__sophia'),
-// 	'timmy': document.getElementById('modal__timmy'),
-// 	'charly': document.getElementById('modal__charly'),
-// 	'scarlett': document.getElementById('modal__scarlett'),
-// 	'freddie': document.getElementById('modal__freddie'),
-// };
-
-// const body = document.body; // Получаем элемент <body>
-
-// Object.keys(modals).forEach(function (modal) {
-// 	if (modals[modal]) {
-// 		document.getElementById('open-modal-btn-' + modal).addEventListener('click', function () {
-// 			modals[modal].classList.add('open');
-// 			body.style.overflow = 'hidden'; // Добавляем стиль для запрета скроллинга
-// 		});
-
-// 		const closeBtn = modals[modal].querySelector('.close-my-modal-btn');
-// 		if (closeBtn) {
-// 			closeBtn.addEventListener('click', function () {
-// 				modals[modal].classList.remove('open');
-// 				body.style.overflow = ''; // Удаляем стиль для возврата скроллинга
-// 			});
-// 		}
-
-// 	}
-
-// });
+Object.keys(modals).forEach(function (modalId) {
+	const modal = modals[modalId];
+	if (modal) {
+		const closeBtn = modal.querySelector('.close-my-modal-btn');
+		if (closeBtn) {
+			closeBtn.addEventListener('click', function () {
+				modal.classList.remove('open');
+				body.style.overflow = '';
+			});
+		}
+	}
+});
 
 
 
@@ -116,7 +120,7 @@ let pets =
 		}
 	]
 
-const container = document.querySelector('.our-pets__container');
+
 const firstPageBtn = document.querySelector('.first-page');
 const prevPageBtn = document.querySelector('.prev-page');
 const scoreboard = document.querySelector('.pagination__scoreboard');
@@ -131,40 +135,41 @@ let numPages;
 pets = shuffleArray(pets);
 
 const screenWidth = window.innerWidth;
-if (screenWidth >= 769) {
+if (screenWidth < 4800 && screenWidth >= 1280) {
 	numPages = 6;
-} else if (screenWidth >= 321) {
+} else if (screenWidth >= 660 && screenWidth <= 1279) {
 	numPages = 8;
 } else {
 	numPages = 16;
 }
 
 
+
 function updateButtonState() {
 	if (currentPage === 1) {
-	  firstPageBtn.disabled = true;
-	  prevPageBtn.disabled = true;
-	  firstPageBtn.classList.add('disabled');
-	  prevPageBtn.classList.add('disabled');
+		firstPageBtn.disabled = true;
+		prevPageBtn.disabled = true;
+		firstPageBtn.classList.add('disabled');
+		prevPageBtn.classList.add('disabled');
 	} else {
-	  firstPageBtn.disabled = false;
-	  prevPageBtn.disabled = false;
-	  firstPageBtn.classList.remove('disabled');
-	  prevPageBtn.classList.remove('disabled');
+		firstPageBtn.disabled = false;
+		prevPageBtn.disabled = false;
+		firstPageBtn.classList.remove('disabled');
+		prevPageBtn.classList.remove('disabled');
 	}
- 
+
 	if (currentPage === numPages) {
-	  nextPageBtn.disabled = true;
-	  lastPageBtn.disabled = true;
-	  nextPageBtn.classList.add('disabled');
-	  lastPageBtn.classList.add('disabled');
+		nextPageBtn.disabled = true;
+		lastPageBtn.disabled = true;
+		nextPageBtn.classList.add('disabled');
+		lastPageBtn.classList.add('disabled');
 	} else {
-	  nextPageBtn.disabled = false;
-	  lastPageBtn.disabled = false;
-	  nextPageBtn.classList.remove('disabled');
-	  lastPageBtn.classList.remove('disabled');
+		nextPageBtn.disabled = false;
+		lastPageBtn.disabled = false;
+		nextPageBtn.classList.remove('disabled');
+		lastPageBtn.classList.remove('disabled');
 	}
- }
+}
 
 
 function generatePetCards(page) {
@@ -178,21 +183,29 @@ function generatePetCards(page) {
 
 	container.innerHTML = '';
 
+
+	let cardId = 1;
+
 	pagePets.forEach(pet => {
 		const petCard = document.createElement('div');
 		petCard.classList.add('our-pets__block');
-
+		petCard.id = pet.name; // использование имени питомца в качестве id
+  
 		const petImage = document.createElement('img');
 		petImage.src = pet.img;
 		petImage.alt = pet.name;
 		petCard.appendChild(petImage);
-
+  
 		const petName = document.createElement('p');
 		petName.innerText = pet.name;
 		petCard.appendChild(petName);
-
+  
+		const learnMoreBtn = document.createElement('button');
+		learnMoreBtn.innerText = 'Learn More';
+		petCard.appendChild(learnMoreBtn);
+  
 		container.appendChild(petCard);
-	});
+  });
 
 	updateButtonState();
 }
