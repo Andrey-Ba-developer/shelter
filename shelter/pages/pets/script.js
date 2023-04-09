@@ -1,4 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () { // меню бургер--------------------------------
+// ----------------------------------------------меню бургер start------------------------------
+
+document.addEventListener('DOMContentLoaded', function () { 
 	const burgerBtn = document.getElementById('burger-btn');
 	const header = document.querySelector('.header');
 	const body = document.querySelector('body');
@@ -27,14 +29,14 @@ document.addEventListener('DOMContentLoaded', function () { // меню бург
 		});
 	});
 });
-// --------------------------------------------------------------------меню бургер--------------------------------
+// ----------------------------------------------меню бургер end------------------------------
 
 
 
 
 
 
-
+// ----------------------------------------------модальное окно start--------------------------
 
 const container = document.querySelector('.our-pets__container');
 
@@ -75,15 +77,13 @@ Object.keys(modals).forEach(function (modalId) {
 		}
 	}
 });
+// ----------------------------------------------модальное окно end--------------------------
 
 
 
 
 
-
-
-
-
+// -----------------------------------------пагинация страницы start--------------------------
 let pets =
 	[
 		{
@@ -120,13 +120,11 @@ let pets =
 		}
 	]
 
-
 const firstPageBtn = document.querySelector('.first-page');
 const prevPageBtn = document.querySelector('.prev-page');
 const scoreboard = document.querySelector('.pagination__scoreboard');
 const nextPageBtn = document.querySelector('.next-page');
 const lastPageBtn = document.querySelector('.last-page');
-
 
 const petsPerPage = 8;
 let currentPage = 1;
@@ -142,8 +140,6 @@ if (screenWidth < 4800 && screenWidth >= 1280) {
 } else {
 	numPages = 16;
 }
-
-
 
 function updateButtonState() {
 	if (currentPage === 1) {
@@ -170,7 +166,6 @@ function updateButtonState() {
 		lastPageBtn.classList.remove('disabled');
 	}
 }
-
 
 function generatePetCards(page) {
 	const startIndex = (page - 1) * petsPerPage;
@@ -205,11 +200,15 @@ function generatePetCards(page) {
 		petCard.appendChild(learnMoreBtn);
   
 		container.appendChild(petCard);
+		
+		setTimeout(() => {
+			petCard.classList.add('fade-in');
+		 }, 10 * cardId); 
+		 cardId++;
   });
 
 	updateButtonState();
 }
-
 
 
 function shuffleArray(array) {
@@ -276,8 +275,6 @@ generatePetCards(currentPage);
 updateButtonState()
 updateScoreboard();
 
-
-
 firstPageBtn.disabled = true
 
 
@@ -286,5 +283,5 @@ prevPageBtn.addEventListener('click', handlePrevPageClick);
 nextPageBtn.addEventListener('click', handleNextPageClick);
 lastPageBtn.addEventListener('click', handleLastPageClick);
 
-
+// -----------------------------------------пагинация страницы end--------------------------
 

@@ -20,7 +20,7 @@ html {
 body {
 	box-sizing: border-box;
 
-	&::-webkit-scrollbar {
+	::-webkit-scrollbar {
 		display: none;
 	}
 
@@ -276,9 +276,13 @@ a {
 	border-radius: 9px;
 	margin-right: 40px;
 	margin-bottom: 30px;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
 }
 
-
+.our-pets__block.fade-in {
+	opacity: 1;
+}
 
 .our-pets__block:last-child {
 	margin-right: 0;

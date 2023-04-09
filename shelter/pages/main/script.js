@@ -1,3 +1,5 @@
+// --------------------------------------меню бургер start----------------------------------
+
 document.addEventListener('DOMContentLoaded', function () {
 	const burgerBtn = document.getElementById('burger-btn');
 	const header = document.querySelector('.header');
@@ -28,65 +30,55 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 });
+// --------------------------------------меню бургер end------------------------------------
 
 
 
+// -------------------------------------модальное окно start---------------------------------
+const containerPets = document.querySelector('.our-friends-content');
+
+const modals = {
+	'katrine': document.getElementById('katrine'),
+	'jennifer': document.getElementById('jennifer'),
+	'woody': document.getElementById('woody'),
+	'sophia': document.getElementById('sophia'),
+	'timmy': document.getElementById('timmy'),
+	'charly': document.getElementById('charly'),
+	'scarlett': document.getElementById('scarlett'),
+	'freddie': document.getElementById('freddie'),
+};
+
+const body = document.body;
+
+containerPets.addEventListener('click', function (event) {
+	const petCard = event.target.closest('.our-pets__block');
+	if (petCard) {
+		const modalId = petCard.id.toLowerCase();
+		const modal = modals[modalId];
+		if (modal) {
+			modal.classList.add('open');
+			body.style.overflow = 'hidden';
+		}
+	}
+});
+
+Object.keys(modals).forEach(function (modalId) {
+	const modal = modals[modalId];
+	if (modal) {
+		const closeBtn = modal.querySelector('.close-my-modal-btn');
+		if (closeBtn) {
+			closeBtn.addEventListener('click', function () {
+				modal.classList.remove('open');
+				body.style.overflow = '';
+			});
+		}
+	}
+});
+// -------------------------------------модальное окно end---------------------------------
 
 
 
-
-
-
-
-
-
-
-// const modals = {
-// 	'katrine': document.getElementById('katrine'),
-// 	'jennifer': document.getElementById('jennifer'),
-// 	'woody': document.getElementById('woody'),
-// 	'sophia': document.getElementById('sophia'),
-// 	'timmy': document.getElementById('timmy'),
-// 	'charly': document.getElementById('charly'),
-// 	'scarlett': document.getElementById('scarlett'),
-// 	'freddie': document.getElementById('freddie'),
-// };
-
-// const body = document.body;
-
-// container.addEventListener('click', function (event) {
-// 	const petCard = event.target.closest('.our-pets__block');
-// 	if (petCard) {
-// 		const modalId = petCard.id.toLowerCase();
-// 		const modal = modals[modalId];
-// 		if (modal) {
-// 			modal.classList.add('open');
-// 			body.style.overflow = 'hidden';
-// 		}
-// 	}
-// });
-
-// Object.keys(modals).forEach(function (modalId) {
-// 	const modal = modals[modalId];
-// 	if (modal) {
-// 		const closeBtn = modal.querySelector('.close-my-modal-btn');
-// 		if (closeBtn) {
-// 			closeBtn.addEventListener('click', function () {
-// 				modal.classList.remove('open');
-// 				body.style.overflow = '';
-// 			});
-// 		}
-// 	}
-// });
-
-
-
-
-
-
-
-
-
+// -------------------------------------слайдер start---------------------------------------
 let pets =
 	[
 		{
@@ -123,19 +115,13 @@ let pets =
 		}
 	]
 
-
-
-
 const container = document.querySelector('.our-friends-content');
-
 const prevPageBtn = document.querySelector('.our-friends__icon-block-left');
 const nextPageBtn = document.querySelector('.our-friends__icon-block-right');
-
 
 const petsPerPage = 3;
 let currentPage = 1;
 let numPages;
-
 
 pets = shuffleArray(pets);
 
@@ -149,9 +135,6 @@ let currentGroupIndex = 0;
 let lastThreePets = [];
 
 
-
-
-
 function generatePetCards() {
 	let newHtml = '';
 	
@@ -160,7 +143,6 @@ function generatePetCards() {
 	  container.removeChild(container.firstChild);
 	}
  
-	
 	container.classList.add('our-friends-content-transition');
  
 	const currentGroup = petGroups[currentGroupIndex];
@@ -187,38 +169,30 @@ function generatePetCards() {
 	container.innerHTML = '';
 
 	pagePets.forEach((pet, index) => {
-		if (index >= 3) {
-		  newHtml += '<div class="our-pets__block hide">';
-		} else {
-		  newHtml += '<div class="our-pets__block">';
-		}
-		newHtml += `
-		  <img src="${pet.img}" alt="${pet.name}">
-		  <p>${pet.name}</p>
-		  <button>Learn More</button>
-		</div>
-		`;
+		const petCard = document.createElement('div');
+		petCard.classList.add('our-pets__block');
+		petCard.id = pet.name; // использование имени питомца в качестве id
+  
+		const petImage = document.createElement('img');
+		petImage.src = pet.img;
+		petImage.alt = pet.name;
+		petCard.appendChild(petImage);
+  
+		const petName = document.createElement('p');
+		petName.innerText = pet.name;
+		petCard.appendChild(petName);
+  
+		const learnMoreBtn = document.createElement('button');
+		learnMoreBtn.innerText = 'Learn More';
+		petCard.appendChild(learnMoreBtn);
+  
+		container.appendChild(petCard);
 	 });
- 
+
 	container.insertAdjacentHTML('beforeend', newHtml);
  
-	const cards = document.querySelectorAll('.our-pets__block');
-	cards.forEach((card, index) => {
-	  setTimeout(() => {
-		 if (index < 3) {
-			card.classList.add('show');
-		 } else {
-			card.classList.add('hide');
-		 }
-	  }, 100 * index);
-	});
  }
  
-
-
-
-
-
 function shuffleArray(array) {
 	const shuffled = [...array];
 	for (let i = shuffled.length - 1; i > 0; i--) {
@@ -235,7 +209,6 @@ function shuffleArray(array) {
 }
 
 
-
 function handlePrevPageClick() {
 	container.classList.add('slide-animation');
 	container.style.transform = 'translateX(100%)';
@@ -249,7 +222,6 @@ function handlePrevPageClick() {
 		 }, 0);
 	}, 500);
 }
-
 
 function handleNextPageClick() {
 	container.classList.add('slide-animation');
@@ -265,14 +237,9 @@ function handleNextPageClick() {
 	}, 500);
 }
 
-
-
-
-
-
-
-
 generatePetCards(currentPage);
 
 prevPageBtn.addEventListener('click', handlePrevPageClick);
 nextPageBtn.addEventListener('click', handleNextPageClick);
+
+// -------------------------------------слайдер end-----------------------------------------

@@ -417,9 +417,14 @@ body {}
 
  }
  
- .our-pets__block {
+ .our-pets__block:hover button {
+	background-color: #e5bb84;
 	
- }
+	color: white;
+}
+.our-pets__block:hover {
+	cursor: pointer;
+}
 
 
 
