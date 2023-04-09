@@ -1,6 +1,6 @@
 // ----------------------------------------------меню бургер start------------------------------
 
-document.addEventListener('DOMContentLoaded', function () { 
+document.addEventListener('DOMContentLoaded', function () {
 	const burgerBtn = document.getElementById('burger-btn');
 	const header = document.querySelector('.header');
 	const body = document.querySelector('body');
@@ -186,27 +186,27 @@ function generatePetCards(page) {
 		const petCard = document.createElement('div');
 		petCard.classList.add('our-pets__block');
 		petCard.id = pet.name; // использование имени питомца в качестве id
-  
+
 		const petImage = document.createElement('img');
 		petImage.src = pet.img;
 		petImage.alt = pet.name;
 		petCard.appendChild(petImage);
-  
+
 		const petName = document.createElement('p');
 		petName.innerText = pet.name;
 		petCard.appendChild(petName);
-  
+
 		const learnMoreBtn = document.createElement('button');
 		learnMoreBtn.innerText = 'Learn More';
 		petCard.appendChild(learnMoreBtn);
-  
+
 		container.appendChild(petCard);
-		
+
 		setTimeout(() => {
 			petCard.classList.add('fade-in');
-		 }, 10 * cardId); 
-		 cardId++;
-  });
+		}, 10 * cardId);
+		cardId++;
+	});
 
 	updateButtonState();
 }
