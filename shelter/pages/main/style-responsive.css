@@ -158,14 +158,117 @@
 	.our-friends__image-block {}
 
 	.our-friends__icon-block-left {
-		left: -65px;
+		margin-right: 10px;
 	}
 
 	.our-friends__icon-block-right {
-		right: -65px;
+		margin-left: 10px;
 	}
 
 }
+
+
+
+@media (max-width: 1092px) {
+
+	.our-pets__block:last-of-type {
+		display: none;
+	}
+
+	.our-friends__icon-block-left {
+		margin-right: 40px;
+	}
+
+	.our-friends__icon-block-right {
+		margin-left: 40px;
+	}
+}
+
+@media (max-width: 1091px) {
+	.our-pets__block:first-of-type {
+		margin-right: 40px;
+	}
+
+	.our-pets__block {
+		margin-right: 0;
+	}
+}
+
+
+@media (max-width: 800px) {
+
+	.our-pets__block:nth-last-of-type(1),
+	.our-pets__block:nth-last-of-type(2) {
+		display: none;
+	}
+
+	.our-pets__block {
+		margin: 0 0 30px 0;
+	}
+
+	.our-pets__block:first-of-type {
+		margin-right: 0px;
+	}
+
+}
+
+@media (max-width: 539px) {
+	.our-friends__icon-block-left {
+		margin-right: 10px;
+	}
+
+	.our-friends__icon-block-right {
+		margin-left: 10px;
+	}
+}
+
+@media (max-width: 450px) {
+
+	.our-pets__block {
+		position: relative;
+	}
+
+	.our-friends__icon-block-right {
+	position: absolute;
+	bottom: 138px;
+    right: 69px;
+	 
+}
+
+.our-friends__icon-block-left {
+	position: absolute;
+	bottom: 138px;
+	left: 69px;
+}
+}
+
+
+@media (max-width: 320px) {
+
+	.our-pets__block {
+		position: relative;
+	}
+
+	.our-friends__icon-block-right {
+	position: absolute;
+	bottom: 138px;
+    right: 69px;
+	 
+}
+
+.our-friends__icon-block-left {
+	position: absolute;
+	bottom: 138px;
+	left: 69px;
+}
+}
+@media (max-width: 534px) {
+	.our-friends-container-onBtn {
+		margin-bottom: 10px;
+	}
+}
+
+
 
 @media (max-width: 1092px) {
 	.help__block-icons-1 {}
@@ -851,27 +954,32 @@
 	.modal__img {
 		display: none
 	}
+
 	.modal__content-subtitle {
 		text-align: center;
 	}
+
 	.modal__content {
 		height: 345px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
 	.modal__content-h3 {
 		margin-top: 34px;
-		
+
 	}
+
 	.close-my-modal-btn {
 		bottom: 351px;
-    right: -29px;
+		right: -29px;
 	}
 
 	.modal__container {
 		width: 240px;
 	}
+
 	.modal {
 		padding: 0 40px;
 	}
@@ -1051,17 +1159,7 @@
 	}
 
 
-	.our-friends__icon-block-right {
-		position: absolute;
-		bottom: -76px;
-		right: 42px;
-	}
 
-	.our-friends__icon-block-left {
-		position: absolute;
-		bottom: -76px;
-		left: 42px;
-	}
 
 	.our-friends__button-primary {
 		margin-top: 114px;

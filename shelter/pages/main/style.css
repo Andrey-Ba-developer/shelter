@@ -386,29 +386,50 @@ body {}
 
 }
 
-
-
-
-
-
-
-
-
 .our-friends-content {
 	display: flex;
-	position: relative;
+	overflow: hidden;
+
 }
 
-/* .our-pets__block {
-	visibility: hidden;
-	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+.our-friends-content-box {
+	overflow: hidden;
+	
 }
 
-.our-friends-content.show .our-pets__block {
-	opacity: 1;
-	transform: translateX(0%);
-	visibility: visible;
-} */
+
+
+
+
+
+
+
+
+
+
+
+.slide-animation {
+	transition: transform 0.4s ease-in-out;
+ }
+
+.our-friends-content {
+	
+
+ }
+ 
+ .our-pets__block {
+	
+ }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -426,6 +447,11 @@ body {}
 	border-radius: 9px;
 	margin-right: 40px;
 	margin-bottom: 30px;
+}
+
+.our-pets__block:hover {
+	background-color: #fff;
+
 }
 
 
@@ -479,7 +505,12 @@ button {
 
 
 
-
+.our-friends-container-onBtn {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
 
 
 .our-friends__arrow-left {}
@@ -489,14 +520,12 @@ button {
 	height: 52px;
 	border: 2px solid #F1CDB3;
 	border-radius: 100px;
-	position: absolute;
-	bottom: 425px;
-	left: 432px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	background: #FAFAFA;
+	margin-right: 50px;
 }
 
 .our-friends__icon-block-right {
@@ -504,14 +533,12 @@ button {
 	height: 52px;
 	border: 2px solid #F1CDB3;
 	border-radius: 100px;
-	position: absolute;
-	bottom: 425px;
-	right: 432px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	background: #FAFAFA;
+	margin-left: 50px;
 
 }
 
