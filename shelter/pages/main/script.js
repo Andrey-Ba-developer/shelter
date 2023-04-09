@@ -106,8 +106,8 @@ let pets =
 			"img": "../../assets/images/pets-timmy.png",
 		},
 		{
-			"name": "Freddie",
-			"img": "../../assets/images/freddie.png",
+			"name": "freddie",
+			"img": "../../assets/images/pets-freddie.png",
 		},
 		{
 			"name": "Charly",
