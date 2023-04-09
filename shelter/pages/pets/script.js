@@ -84,6 +84,7 @@ Object.keys(modals).forEach(function (modalId) {
 
 
 // -----------------------------------------пагинация страницы start--------------------------
+
 let pets =
 	[
 		{
@@ -112,7 +113,7 @@ let pets =
 		},
 		{
 			"name": "Freddie",
-			"img": "../../assets/images/freddie.png",
+			"img": "../../assets/images/pets-freddie.png",
 		},
 		{
 			"name": "Charly",
