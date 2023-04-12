@@ -219,8 +219,8 @@ function handlePrevPageClick() {
 		 setTimeout(() => {
 			  container.classList.add('slide-animation');
 			  container.style.transform = 'translateX(0%)';
-		 }, 0);
-	}, 500);
+		 }, 100);
+	}, 300);
 }
 
 function handleNextPageClick() {
@@ -233,8 +233,8 @@ function handleNextPageClick() {
 		 setTimeout(() => {
 			  container.classList.add('slide-animation');
 			  container.style.transform = 'translateX(0%)';
-		 }, 0);
-	}, 500);
+		 }, 100);
+	}, 300);
 }
 
 generatePetCards(currentPage);
