@@ -1473,19 +1473,3 @@
 
 
 
-/* @media (max-width: 1200px) {
-	body {
-		padding: calc(20px + (50-20)* ((100vw - 320px) / (1200 - 320)));
-	}
-	body {
-		font-size: calc(20px + (30-20)* ((100vw - 320px) / (1200 - 320)));
-		margin-bottom: calc(10px + (20-10)* ((100vw - 320px) / (1200 - 320)));
-	}
-	
-}
-
-@media (max-width: 1200px) {
-	.block-name {
-		font-size: calc(10px + (30-20)* ((100vw - 320px) / (1200 - 320)));
-	}
-} */
