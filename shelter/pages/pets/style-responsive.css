@@ -576,7 +576,11 @@ header.open .header__container-button-menu {
 }
 
 
-
+@media (max-width: 350px) {
+	.no-scroll {
+		width: 100%;
+	}
+}
 
 
 @media (max-width: 320px) {
